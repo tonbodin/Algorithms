@@ -75,6 +75,9 @@ public class Prims {
 		//traverse and update
 		for(int i = 0; i < graph.length - 1; i++) {
 			
+			//keeps track of the index and minWeight
+			//the edge with the lowest weight 
+			//and the index of the node this edge leads to
 			int index = -1;
 			int minWeight = Integer.MAX_VALUE;
 			
@@ -82,6 +85,8 @@ public class Prims {
 			for(int j = 0; j < graph.length; j++) {
 				
 				if(minAdjEdge[j] != -1) {
+					//update the minimum adjacent nodes
+					//correspondingly find the edge with minimum weight. 
 					int temp = graph[recentNode][j];
 					
 					if(temp != 0 && temp < minAdjEdge[j]) {
